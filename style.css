@@ -1,77 +1,61 @@
-/* Reset some default styles for all elements */
+/* Reset some default styles */
 * {
-    box-sizing: border-box; /* Includes padding and border in the element's total width/height */
-    margin: 0;              /* Removes default margin */
-    padding: 0;             /* Removes default padding */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #d5e1ef;
+  min-height: 100vh;
+  font-family: 'Outfit', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+}
+
+.card-img-top {
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f314f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #7b879d;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 375px) {
+  .card {
+    max-width: 90vw;
+    padding: 1rem 0.5rem 2rem 0.5rem;
   }
-  
-  /* Style the body to center everything and set background */
-  body {
-    background: #d5e1ef; /* Light blue background */
-    min-height: 100vh;   /* Body is at least the height of the viewport */
-    font-family: 'Outfit', Arial, sans-serif; /* Sets the font */
-    display: flex;       /* Enables flexbox layout */
-    align-items: center; /* Vertically centers content */
-    justify-content: center; /* Horizontally centers content */
+  .card-title {
+    font-size: 1.1rem;
   }
-  
-  /* Container to help center the card */
-  .container {
-    width: 100vw;   /* Full viewport width */
-    height: 100vh;  /* Full viewport height */
-    display: flex;  /* Flexbox for centering */
-    align-items: center; /* Vertical centering */
-    justify-content: center; /* Horizontal centering */
+  .card-text {
+    font-size: 0.85rem;
   }
-  
-  /* The main QR card styling */
-  .qr-card {
-    background: #fff; /* White background */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* Soft shadow for depth */
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem; /* Space inside the card (top, right, bottom, left) */
-    max-width: 320px; /* Maximum width of the card */
-    width: 100%;      /* Card takes full width up to max-width */
-    display: flex;    /* Flexbox for vertical layout */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center;    /* Center children horizontally */
-  }
-  
-  /* QR code image styling */
-  .qr-img {
-    width: 100%;         /* Image fills the card width */
-    border-radius: 12px; /* Rounded corners for the image */
-    margin-bottom: 1.5rem; /* Space below the image */
-  }
-  
-  /* Card title styling */
-  .qr-card h1 {
-    font-size: 1.25rem;    /* Larger text */
-    font-weight: 700;      /* Bold */
-    color: #1f314f;        /* Dark blue color */
-    text-align: center;    /* Centered text */
-    margin-bottom: 1rem;   /* Space below the title */
-  }
-  
-  /* Card description paragraph styling */
-  .qr-card p {
-    font-size: 0.95rem;    /* Slightly smaller text */
-    color: #7b879d;        /* Grayish color */
-    text-align: center;    /* Centered text */
-    font-weight: 400;      /* Normal weight */
-    line-height: 1.4;      /* More space between lines */
-  }
-  
-  /* Responsive design: for screens 375px wide or less (like phones) */
-  @media (max-width: 375px) {
-    .qr-card {
-      padding: 1rem 0.5rem 2rem 0.5rem; /* Smaller padding for small screens */
-      max-width: 90vw;                  /* Card is 90% of the viewport width */
-    }
-    .qr-card h1 {
-      font-size: 1.1rem;   /* Slightly smaller title */
-    }
-    .qr-card p {
-      font-size: 0.85rem;  /* Slightly smaller paragraph */
-    }
-  }
+}
